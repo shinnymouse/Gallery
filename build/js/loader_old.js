@@ -1,9 +1,8 @@
 ﻿/// <reference path="babylon.js" />
 
 var canvas = document.getElementById("renderCanvas");
-
-
 var sceneLocation = "../../../Scenes/";
+
 // UI
 var controlPanel = document.getElementById("controlPanel");
 var cameraPanel = document.getElementById("cameraPanel");
@@ -93,8 +92,8 @@ var loadScene = function (name, incremental, sceneLocation, then) {
     engine.resize();
 
     var dlCount = 0;
-    BABYLON.SceneLoader.Load("https://raw.githubusercontent.com/shinnymouse/Gallery/main/Scenes/Espilit/",  "espilit.babylon", engine, function (newScene) {
-       scene = newScene;
+    BABYLON.SceneLoader.Load("https://github.com/shinnymouse/Gallery/main/Scenes/Espilit", "espilit.babylon", engine, function (newScene) {
+        scene = newScene;
         scene.executeWhenReady(function () {
             canvas.style.opacity = 1;
             if (scene.activeCamera) {
